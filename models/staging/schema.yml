@@ -24,6 +24,8 @@ models:
 
       - name: artist_country
         description: "Country of origin of the artist"
+        data_tests:
+          - not_null
 
       - name: followers_millions
         description: "Total followers in millions"
@@ -36,3 +38,62 @@ models:
         
       - name: gender
         description: "Gender of the artist"
+
+  - name: stg_spotify_songs
+    description: "Staging to prepare Spotify songs data"
+    columns:
+      - name: wrapped_2025_rank
+        description: "The position of the song in the Spotify Wrapped 2025 ranking"
+        data_tests:
+          - not_null
+
+      - name: song_title
+        description: "Title of the song"
+        data_tests:
+          - not_null
+
+      - name: artist
+        description: "Main artist or artists associated with the song"
+        data_tests:
+          - not_null
+
+      - name: streams_2025_billions
+        description: "Total streams in 2025, in billions"
+
+      - name: primary_genre
+        description: "Primary genre classification of the song"
+
+      - name: bpm
+        description: "Song tempo in beats per minute"
+
+      - name: duration_seconds
+        description: "Duration of the song in seconds"
+
+      - name: release_year
+        description: "Year when the song was released"
+
+      - name: artist_country
+        description: "Country of origin of the artist"
+        data_tests:
+          - not_null
+
+      - name: explicit
+        description: "Indicates whether the song contains explicit content"
+
+      - name: danceability
+        description: "Danceability score of the song"
+
+      - name: energy
+        description: "Energy score of the song"
+
+      - name: valence
+        description: "Valence score representing musical positiveness"
+
+      - name: acousticness
+        description: "Acousticness score of the song"
+
+      - name: peak_global_chart_position
+        description: "Best global chart position reached by the song"
+
+      - name: dataset_part
+        description: "Dataset segment identifier for the Spotify Wrapped 2025 Top 50 songs"
