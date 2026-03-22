@@ -3,7 +3,7 @@ import shutil
 import os
 
 path = kagglehub.dataset_download("abbas829/bank-customer-churn")
-destination = "./seeds/"
+destination = "./seeds"
 
 try:
     # If path contains a single directory (like '1/'), extract its contents
